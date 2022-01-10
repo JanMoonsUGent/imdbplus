@@ -15,9 +15,34 @@ const NavigationMobile = ({ locale, locales }) => {
     en: 'News',
     nl: 'Nieuws',
   }
+  const resolveGenre = {
+    en: 'Genres',
+    nl: 'Genres',
+    fr: 'Genres',
+  }
   const resolveMerchandise = {
     en: 'Shop',
     nl: 'Winkel',
+  }
+  const resolveGames = {
+    en: 'Games',
+    nl: 'Spellen',
+    fr: 'Jeux',
+  }
+  const resolveCharacters = {
+    en: 'Characters',
+    nl: 'Personages',
+    fr: 'Personnages',
+  }
+  const resolvePlatform = {
+    en: 'Platforms',
+    nl: 'Platforms',
+    fr: 'Plateformes',
+  }
+  const resolveCompany = {
+    en: 'Companies',
+    nl: 'Bedrijven',
+    fr: 'Entreprises'
   }
   function togglenav() {
     setNavstate(result.data.stories);
@@ -43,10 +68,25 @@ const NavigationMobile = ({ locale, locales }) => {
         <div className={styles.hamburger} onClick={() => setNavstate(!navstate)}><div className={styles.line}></div><div className={styles.line}></div><div className={styles.line}></div></div>
         {navstate&&<div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
-            <div className={styles.navlink}>
+            {/* <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
+            </div> */}
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/genre_game`} className={styles.genre_game}>{resolveGenre[locale]}</a>
             </div>
             <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/games`} className={styles.game}>{resolveGames[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/characters`} className={styles.character}>{resolveCharacters[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/platforms`} className={styles.platform}>{resolvePlatform[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/companies`} className={styles.company}>{resolveCompany[locale]}</a>
+            </div>
+            {/* <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
             </div>
             <div className={styles.navlink}>
@@ -54,7 +94,7 @@ const NavigationMobile = ({ locale, locales }) => {
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
-            </div>
+            </div> */}
           </div>
           <div className={styles.navlocales}>
             {

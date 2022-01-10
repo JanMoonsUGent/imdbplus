@@ -11,11 +11,17 @@ const TwoCol = ({ data, level, locale }) => {
   return (
     <SbEditable content={content}>
       <div className={styles.twocol}>
+      <div className={styles.title}>
+            {content.genredesc}
+            </div>
         <div className={styles.one}>
           {content.one ? content.one.map((content) =>
             <DynamicComponent data={content} key={content._uid} locale={locale} />
           ) : null}
         </div>
+        <div className={styles.title}>
+            {content.gamedescr}
+            </div>
         <div className={styles.two}>
           {content.two ? content.two.map((content) =>
             <DynamicComponent data={content} key={content._uid} locale={locale} />

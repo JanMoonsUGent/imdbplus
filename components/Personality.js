@@ -45,6 +45,7 @@ const Personality = ({ data, level }) => {
             {countries.map((item, index) => (
               <div className={styles.country}>
                 <img src={item.content.flag.filename}></img>
+                {item.content.title}
               </div>
             ))}
           </div>

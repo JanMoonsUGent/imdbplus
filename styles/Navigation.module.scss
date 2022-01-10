@@ -54,6 +54,18 @@
           &.product:hover {
             border: 5px solid $color-primary-product;
           }
+          &.game:hover {
+            border: 5px solid $color-primary-game;
+          }
+          &.genre:hover {
+            border: 5px solid $color-primary-genre;
+          }
+          &.platform:hover {
+            border: 5px solid $color-primary-platform;
+          }
+          &.character:hover {
+            border: 5px solid $color-primary-character;
+          }
         }
 
       }
@@ -73,7 +85,7 @@
         border: 5px solid transparent;
 
         &:hover {
-          border: 5px solid black;
+          border: 5px solid rgb(189, 16, 16);
         }
       }
     }

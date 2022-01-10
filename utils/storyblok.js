@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import StoryblokClient from "storyblok-js-client";
 
 const Storyblok = new StoryblokClient({
-  accessToken: "c1g4yy5Pro9MeJrxV9grQAtt",
+  accessToken: "bJoe4T1uxcfTg1sGiIAaAgtt",
   cache: {
     clear: "auto",
     type: "memory",
@@ -33,8 +33,23 @@ export async function getData(uuid, locale, preview, components, itemtype, sortb
       case "studios":
         sbParams.filter_query.studios = { any_in_array: uuid };
         break;
+      case "game_review":
+        sbParams.filter_query.game_review = { any_in_array: uuid };
+        break;
       case "movies":
         sbParams.filter_query.movies = { any_in_array: uuid };
+        break;
+      case "minimumage":
+        sbParams.filter_query.minimumage = { any_in_array: uuid };
+        break;
+      case "publisher":
+      sbParams.filter_query.publisher = { any_in_array: uuid };
+      break;
+        case "platform":
+        sbParams.filter_query.platform = { any_in_array: uuid };
+        break;
+      case "companies":
+        sbParams.filter_query.companies = { any_in_array: uuid };
         break;
       case "newsitems":
         sbParams.filter_query.newsitems = { any_in_array: uuid };
@@ -45,8 +60,11 @@ export async function getData(uuid, locale, preview, components, itemtype, sortb
       case "personalities":
         sbParams.filter_query.personalities = { any_in_array: uuid };
         break;
-    }
+      case "character":
+        sbParams.filter_query.character = { any_in_array: uuid };
+        break;
   }
+}
 
   if (sortby) {
     sbParams.sort_by = sort_by;

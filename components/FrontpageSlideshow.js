@@ -40,11 +40,11 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
     var content = data;
   }
 
-  const [newsitems, setNewsitems] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
-  getFPSData(content._uid, locale, content.preview = false, 'newsitem').then(
+  getFPSData(content._uid, locale, content.preview = false, 'character').then(
     function (result) {
-      setNewsitems(result.data.stories);
+      setCharacters(result.data.stories);
     });
 
 
@@ -65,11 +65,11 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style">
-        {newsitems.map((item) => {
+        {characters.map((item) => {
           const lang = item.lang === "default" ? "/en" : `/${item.lang}`;
           return (
             <a
-              href={`${lang}/newsitem/${item.slug}`}
+              href={`${lang}/characters/${item.slug}`}
             >
               <div className={styles.item}>
                 <div className={styles.mainpicture} style={{ backgroundImage: `url("${item.content.mainpicture.filename}")` }}>

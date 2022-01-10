@@ -24,6 +24,22 @@ import EmailOptin from './EmailOptin'
 import TwoCol from './TwoCol'
 import Title from './Title'
 import TopMovies from './TopMovies'
+import Game from './Game'
+import GameList from './GameList'
+import Character from './Character'
+import CharacterList from './CharacterList'
+import Genre_Game from './genre_game'
+import genregenre from './Genregenre'
+import Platform from './Platform'
+import Role from './Role'
+import Gender from './Gender'
+import Company from './Company'
+import PlatformList from './PlatformList'
+import CompanyList from './CompanyList'
+import Review from './Review'
+import minimumage from './minimumage'
+import ReviewOptin from './ReviewOptin'
+import ReviewList from './ReviewList'
 
 const Components = {
   'teaser': Teaser,
@@ -51,7 +67,23 @@ const Components = {
   'emailoptin':EmailOptin,
   'twocol':TwoCol,
   'title':Title,
-  'topmovies':TopMovies
+  'topmovies':TopMovies,
+  'game' :Game,
+  'gamelist':GameList,
+  'character':Character,
+  'characterlist':CharacterList,
+  'genre_game':Genre_Game,
+  'genregenre': genregenre,
+  'platform': Platform,
+  'role':Role,
+  'gender': Gender,
+  'Company':Company,
+  'platformlist': PlatformList,
+  'companylist':CompanyList,
+  'review': Review,
+  'minimumage':minimumage,
+  "reviewoptin":ReviewOptin,
+  "reviewlist": ReviewList
 }
 
 

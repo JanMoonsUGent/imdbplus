@@ -19,6 +19,7 @@ const Layout = ({ children, locale, locales, data }) => {
     const hostname = window.location.hostname;
  }
   let image=hostname+"assets/logo-colored-full.png";
+  // let image_loc=hostname+"assets/fr.png";
 
 
   if (data && data.story) {

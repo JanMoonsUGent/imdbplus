@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  gap: 24px;
+  gap: 0px;
 
   .one {
     display: grid;
@@ -13,18 +13,24 @@
   .two {
     display: grid;
   }
-}
+  .title {
+    font-size: 1.4em;
+    font-weight: 800;
+    margin-bottom: 0px;
 
-
-
-
-@media (min-width: 1650px) {
-  .twocol {
-    display: grid;
-    grid-template-columns: 8fr 6fr;
-
-    .one {}
-
-    .two {}
   }
 }
+
+
+
+
+// @media (min-width: 1650px) {
+//   .twocol {
+//     display: grid;
+//     grid-template-columns: 8fr 6fr;
+
+//     .one {}
+
+//     .two {}
+//   }
+// }

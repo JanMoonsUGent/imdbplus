@@ -5,7 +5,6 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { hotjar } from 'react-hotjar'
 
-import * as ga from '../utils/ga'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -14,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     const handleRouteChange = (url) => {
       // ga.pageview(url)
     }
-    //hotjar.initialize(XXXXXXX, X)
+    hotjar.initialize(2762145, 6)
     //When the component is mounted, subscribe to router changes
     //and log those page views
     router.events.on('routeChangeComplete', handleRouteChange)

@@ -1,6 +1,8 @@
 import styles from "../styles/Footer.module.scss"
 
-const Footer = () => {
+
+const Footer = (locale,locales) => {
+  
   return (
     <footer className={styles.footerwrapper}>
       <div className={styles.footer}>
@@ -12,6 +14,7 @@ const Footer = () => {
             className=""
           />
         </div>
+        
         <p>IMDB Plus is every bit as good as IMDB. Plus!</p>
       </div>
     </footer>

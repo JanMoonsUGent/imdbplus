@@ -7,11 +7,12 @@
   display: flex;
 align-items: flex-start;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: 40px;
+  margin-left:105%;
   @media (min-width: 1024px) {
     flex-direction: row;
-    align-items: center;
+    align-items: flex;
   }
 
 
@@ -21,7 +22,7 @@ align-items: flex-start;
       font-size: 1.3em;
       font-weight: 800;
       width: 180px;
-      display: flex;
+      display: center;
       max-width: 300px;
       min-width: 180px;
       margin-bottom: 20px;
